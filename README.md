@@ -96,7 +96,7 @@ sed "s/cluster-vks/$CLUSTER_NAME/g" vks.yaml  | kubectl apply -f -
 # cluster.cluster.x-k8s.io/bmc-vks configured
 ```
 
-### 5. Wait for cluster creation
+### 6. Wait for cluster creation
 ```shell
 # Test commands
 kubectl get cluster --watch
@@ -111,7 +111,7 @@ kubectl get cluster --watch
 # Note: wait until output shows "Available: True" 
 ```
 
-### 6. Connect to VKS cluster
+### 7. Connect to VKS cluster
 ```shell
 # Connect to the VKS cluster
 vcf context create vks \
@@ -137,7 +137,7 @@ vcf context create vks \
 # [ok] successfully created context: vks:bmc-vks
 ```
 
-### 7. Use VKS cluster context
+### 8. Use VKS cluster context
 ```shell
 
 # Use context
@@ -163,7 +163,7 @@ kubectl get nodes -o wide
 ```
 
 
-### 8. Create VKS namespace
+### 9. Create VKS namespace
 ```shell
 # Create a namespace on the VKS cluster
 kubectl create namespace $CLUSTER_NAMESPACE_NAME
@@ -184,7 +184,7 @@ kubectl config set-context --current --namespace=$CLUSTER_NAMESPACE_NAME
 kubectl get all
 ```
 
-### 9. (Optional) Create Secret with Docker.io Credentials
+### 10. (Optional) Create Secret with Docker.io Credentials
 May be required if the deployment hits errors about the site hitting image pull limits.
 ```shell
 # Create secret with Docker login credentials in Kubernetes
