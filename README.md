@@ -1,4 +1,4 @@
-# VKS Calico OSS Deployment
+# VKS Deployment
 ## Requirements
 ### CLI Tools
 * kubectl cli v1.34: https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl
